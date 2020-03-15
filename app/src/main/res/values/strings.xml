@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Appiness Demo</string>
+
+    <string name="title_search">Search</string>
+    <string name="title_no_data_found">No Data Found</string>
+    <string name="msg_no_internet">Make sure your device is connected to the Internet.</string>
+
+</resources>

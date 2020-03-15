@@ -1,0 +1,2 @@
+rootProject.name='UrvishAppinessDemo'
+include ':app'

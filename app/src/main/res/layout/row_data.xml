@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.appiness.urvish.network.model.DataModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/card_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{data.title}"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                tools:text="Catalysts, Explorers &amp; Secret Keepers: Women of SF" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_title"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{`By ` + data.by}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/_10sdp"
+                tools:text="By Museum of Science Fiction" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_num_of_backers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_by"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{`No. of Backers : ` + data.num_backers}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                tools:text="No. of Backers : 219382" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
+
